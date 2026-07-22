@@ -1,0 +1,47 @@
+# .NET Core / Visual Studio / MAUI
+/.vs/
+/bin/
+/obj/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Android specific
+*.apk
+*.aab
+*.apks
+.gradle/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+# JetBrains Rider / Visual Studio Code
+.vs/
+.idea/
+*.rsuser
+*.suo
+*.user
+*.userosscache
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
