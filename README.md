@@ -53,10 +53,10 @@
 Для сборки и запуска на Android-устройстве с помощью .NET CLI выполните:
 
 ```Bash
-dotnet build -f net8.0-android
+dotnet build -f net10.0-android
 ```
 ```Bash
-dotnet publish -f net8.0-android -c Release
+dotnet publish -f net10.0-android -c Release
 ```
 Либо откройте решение в IDE и выберите целевую платформу (Android или Desktop) для запуска по клавише F5.
 
