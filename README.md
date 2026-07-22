@@ -24,9 +24,15 @@
 * **Дополнительные утилиты:** быстрый расчет базовых параметров цепей для подбора оптимального оборудования.
 
 ## 🛠 Технологический стек
+Windows -
 * **Язык программирования:** C# (100%)
 * **Интерфейс (UI):** Windows Forms (WinForms)
 * **Платформа:** .NET / .NET Framework
+
+* Android -
+* * **Язык программирования:** C#
+* **Интерфейс (UI):** XAML, .NET MAUI / Xamarin (кроссплатформенный интерфейс с адаптивной темной темой)
+* **Платформа:** .NET (.NET CLI, Android SDK)
 
 ## ⚙️ Быстрый старт и сборка
 
@@ -36,10 +42,19 @@
 ### Сборка и запуск
 1. Клонируйте репозиторий на свой компьютер:
    ```bash
-   git clone https://github.com
+   git clone [https://github.com/DIMA-XP/Electro-Calc-BY-DIMA-XP.git](https://github.com/DIMA-XP/Electro-Calc-BY-DIMA-XP.git)
    ```
 2. Откройте проект в Visual Studio (через файл решения или файл проекта `Calc Watt To Amper BY DIMA XP.csproj`).
 3. Нажмите кнопку **Пуск (Start / F5)** для компиляции и запуска приложения.
+Для Android -
+4. Откройте проект в вашей среде разработки или перейдите в папку проекта через терминал.
+
+Для сборки и запуска на Android-устройстве с помощью .NET CLI выполните:
+
+Bash
+dotnet build -f net8.0-android
+dotnet publish -f net8.0-android -c Release
+Либо откройте решение в IDE и выберите целевую платформу (Android или Desktop) для запуска по клавише F5.
 
 ## 📖 Использование
 1. Запустите приложение `Electro-Calc`.
