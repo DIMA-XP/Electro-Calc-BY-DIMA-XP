@@ -1,0 +1,46 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForAndroid.PhaseCapacitorPage"
+             Title="Расчёт фазосдвигающего конденсатора"
+             BackgroundColor="#121212">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="15">
+            <Label Text="Расчёт фазосдвигающего конденсатора"
+                   TextColor="#FF5252"
+                   FontAttributes="Italic,Bold"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,5"/>
+
+            <Border BackgroundColor="#1E1E1E" Padding="10">
+                <HorizontalStackLayout Spacing="25" HorizontalOptions="Center">
+                    <RadioButton x:Name="RbStar" BackgroundColor="#1E1E1E" GroupName="ConnectionGroup" IsChecked="True" Content="Звезда  " TextColor="White"/>
+                    <RadioButton x:Name="RbDelta" BackgroundColor="#1E1E1E" GroupName="ConnectionGroup"  Content="Треугольник" TextColor="White"/>
+                </HorizontalStackLayout>
+            </Border>
+
+            <Label Text="Мощность двигателя:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryPower" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="Вт" PlaceholderColor="#B0B0B0"/>
+
+            <Label Text="Напряжение сети:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryVoltage" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="В" PlaceholderColor="#B0B0B0"/>
+
+            <Label Text="КПД двигателя (%):" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryEfficiency" Text="75" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White"/>
+
+            <Label Text="cos φ:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryCosPhi" Text="0,9" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White"/>
+
+            <Label Text="Результат:" TextColor="White" FontAttributes="Bold"/>
+
+            <!-- Заменили Editor на Label, чтобы текст не обрезался и не выглядел как ссылка -->
+            <Border BackgroundColor="#1E1E1E" Padding="10" HeightRequest="90">
+                <Label x:Name="LblResult" TextColor="#64B5F6" FontSize="14" VerticalTextAlignment="Center"/>
+            </Border>
+
+            <Button Text="Рассчитать" BackgroundColor="#333333" TextColor="White" Clicked="OnCalculateClicked" Margin="0,5,0,0"/>
+            <Button Text="Назад" BackgroundColor="#B71C1C" TextColor="White" Clicked="OnBackClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

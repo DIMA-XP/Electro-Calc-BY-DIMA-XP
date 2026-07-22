@@ -1,0 +1,78 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForAndroid.MainPage"
+             Title="Калькулятор DIMA XP"
+             BackgroundColor="#121212">
+
+    <!-- Меню с троеточием в правом углу -->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="О программе" Clicked="OnAboutClicked" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="15">
+
+            <!-- Заголовок -->
+            <Label Text="Выберите калькулятор, какой вам нужен."
+                   TextColor="#FF5252"
+                   FontAttributes="Italic,Bold"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center" />
+
+            <Label Text="V3.0.0"
+                   TextColor="#64B5F6"
+                   FontAttributes="Bold"
+                   FontSize="22"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,10" />
+
+            <!-- Кнопки меню в темном исполнении -->
+            <Button Text="Запустить калькулятор Watt в Amper и обратно" 
+                    BackgroundColor="#2D2D2D" TextColor="White"
+                    Clicked="OnWattCalculatorClicked"/>
+
+            <Button Text="Запустить калькулятор закона Ома" 
+                    BackgroundColor="#2D2D2D" TextColor="White"
+                    Clicked="OnOhmCalculatorClicked"/>
+
+            <Button Text="Запустить калькулятор расчета сечения из диаметра" 
+                    BackgroundColor="#2D2D2D" TextColor="White"
+                    Clicked="OnWireCalculatorClicked"/>
+
+            <Button Text="Запустить таблицу сечений и токов кабелей" 
+                    BackgroundColor="#2D2D2D" TextColor="White"
+                    Clicked="OnCableTableClicked"/>
+
+            <Button Text="Запустить расчет тока автомата" 
+                    BackgroundColor="#2D2D2D" TextColor="White"
+                    Clicked="OnCircuitBreakerClicked"/>
+
+            <Button Text="Расчёт тока КЗ из сопротивления нагрузки" 
+                    BackgroundColor="#2D2D2D" TextColor="White"
+                    Clicked="OnShortCircuitClicked"/>
+
+            <Button Text="Расчёт потерь на кабели" 
+                    BackgroundColor="#2D2D2D" TextColor="White"
+                    Clicked="OnCableLossClicked"/>
+
+            <Button Text="Функции от НСРР20334" 
+                    BackgroundColor="#2D2D2D" TextColor="White"
+                    Clicked="OnHcppFunctionsClicked"/>
+
+            <Button Text="Слаботочная электрика" 
+                    BackgroundColor="#2D2D2D" TextColor="White"
+                    Clicked="OnRj45Clicked"/>
+
+            <Button Text="Расчёт электрики для квартиры" 
+                    BackgroundColor="#2D2D2D" TextColor="White"
+                    Clicked="OnApartmentCalcClicked"/>
+
+            <!-- Выход -->
+            <Button Text="Выход" 
+                    BackgroundColor="#B71C1C" TextColor="White"
+                    Clicked="OnExitClicked"
+                    Margin="0,20,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

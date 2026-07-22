@@ -1,0 +1,48 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForAndroid.HcppFunctionsPage"
+             Title="Функции от HCPP20334"
+             BackgroundColor="#121212">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="15">
+
+            <Label Text="Функции от HCPP20334"
+                   TextColor="#FF5252"
+                   FontAttributes="Italic,Bold"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,10"/>
+
+            <Button Text="Расчёт мощности ТЭНа" 
+                    BackgroundColor="#333333" TextColor="White" 
+                    Clicked="OnHeaterPowerClicked"/>
+
+            <Button Text="Расчёт фазосдвигающего конденсатора" 
+                    BackgroundColor="#333333" TextColor="White" 
+                    Clicked="OnPhaseCapacitorClicked"/>
+
+            <Button Text="Расчёт балластного конденсатора" 
+                    BackgroundColor="#333333" TextColor="White" 
+                    Clicked="OnBallastCapacitorClicked"/>
+
+            <Button Text="Расчёт стоимости кВт/ч в минуту" 
+                    BackgroundColor="#333333" TextColor="White" 
+                    Clicked="OnEnergyCostClicked"/>
+
+            <Button Text="Расчёт теплого пола" 
+                    BackgroundColor="#333333" TextColor="White" 
+                    Clicked="OnUnderfloorHeatingClicked"/>
+
+            <Button Text="Расчёт мощности по току и cos φ" 
+                    BackgroundColor="#333333" TextColor="White" 
+                    Clicked="OnPowerByCurrentClicked"/>
+
+            <Button Text="Назад" 
+                    BackgroundColor="#B71C1C" TextColor="White" 
+                    Clicked="OnBackClicked"
+                    Margin="0,15,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

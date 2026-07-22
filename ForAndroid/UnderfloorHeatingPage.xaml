@@ -1,0 +1,37 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForAndroid.UnderfloorHeatingPage"
+             Title="Расчёт теплого пола"
+             BackgroundColor="#121212">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="15">
+            <Label Text="Расчёт теплого пола"
+                   TextColor="#FF5252"
+                   FontAttributes="Italic,Bold"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,5"/>
+
+            <Label Text="Общая площадь (м2):" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryArea" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White"/>
+
+            <Label Text="Отступы (м2):" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryOffsets" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White"/>
+
+            <Label Text="Мощность на 1м.кв:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryPowerPerM2" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White"/>
+
+            <Label Text="Шаг укладки:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryStep" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White"/>
+
+            <Label Text="Результат:" TextColor="White" FontAttributes="Bold"/>
+            <Border BackgroundColor="#1E1E1E" Padding="10" HeightRequest="130">
+                <Label x:Name="LblResult" TextColor="#64B5F6" FontSize="13" VerticalTextAlignment="Center"/>
+            </Border>
+
+            <Button Text="Рассчитать" BackgroundColor="#333333" TextColor="White" Clicked="OnCalculateClicked" Margin="0,5,0,0"/>
+            <Button Text="Назад" BackgroundColor="#B71C1C" TextColor="White" Clicked="OnBackClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

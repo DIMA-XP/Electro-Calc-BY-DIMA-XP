@@ -1,0 +1,34 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForAndroid.PowerByCurrentPage"
+             Title="Расчёт мощности по току и cos φ"
+             BackgroundColor="#121212">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="15">
+            <Label Text="Расчёт мощности по току и cos φ"
+                   TextColor="#FF5252"
+                   FontAttributes="Italic,Bold"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,5"/>
+
+            <Label Text="Напряжения:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryVoltage" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="В" PlaceholderColor="#B0B0B0"/>
+
+            <Label Text="Сила тока:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryCurrent" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="А" PlaceholderColor="#B0B0B0"/>
+
+            <Label Text="cos φ:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryCosPhi" Text="0,9" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White"/>
+
+            <Label Text="Результат:" TextColor="White" FontAttributes="Bold"/>
+            <Border BackgroundColor="#1E1E1E" Padding="10" HeightRequest="150">
+                <Label x:Name="LblResult" TextColor="#64B5F6" FontSize="14" VerticalTextAlignment="Center"/>
+            </Border>
+
+            <Button Text="Рассчитать" BackgroundColor="#333333" TextColor="White" Clicked="OnCalculateClicked" Margin="0,5,0,0"/>
+            <Button Text="Назад" BackgroundColor="#B71C1C" TextColor="White" Clicked="OnBackClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

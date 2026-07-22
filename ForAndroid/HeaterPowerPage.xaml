@@ -1,0 +1,29 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForAndroid.HeaterPowerPage"
+             Title="Расчёт мощности ТЭНа"
+             BackgroundColor="#121212">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="12" Padding="15">
+            <Label Text="Расчёт мощности ТЭНа"
+                   TextColor="#FF5252"
+                   FontAttributes="Italic,Bold"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,10"/>
+
+            <Label Text="Напряжение:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryVoltage" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="В" PlaceholderColor="#B0B0B0"/>
+
+            <Label Text="Сопротивление ТЭНа:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryResistance" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="Ом" PlaceholderColor="#B0B0B0"/>
+
+            <Label Text="Результат:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryResult" IsReadOnly="True" BackgroundColor="#1E1E1E" TextColor="#64B5F6" Margin="0,0,0,10"/>
+
+            <Button Text="Рассчитать" BackgroundColor="#333333" TextColor="White" Clicked="OnCalculateClicked"/>
+            <Button Text="Назад" BackgroundColor="#B71C1C" TextColor="White" Clicked="OnBackClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

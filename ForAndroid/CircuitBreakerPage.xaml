@@ -1,0 +1,63 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForAndroid.CircuitBreakerPage"
+             Title="Расчет номинала автомата"
+             BackgroundColor="#121212">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="15">
+
+            <Label Text="Расчёт номинала автомата"
+                   TextColor="#FF5252"
+                   FontAttributes="Italic,Bold"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,5"/>
+
+            <Label Text="Номинал автомата (А):" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryBreaker" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="Введите ток автомата" PlaceholderColor="#B0B0B0"/>
+
+            <Label Text="Выберите коэффициент перегрузки:" TextColor="#64B5F6" FontAttributes="Bold" FontSize="13"/>
+
+            <!-- Радиокнопки с явно заданным белым цветом текста -->
+            <HorizontalStackLayout Spacing="15">
+                <RadioButton x:Name="Rb113" BackgroundColor="#1E1E1E" GroupName="CoeffGroup" IsChecked="True" Content="1.13in   " TextColor="White"/>
+                <RadioButton x:Name="Rb145" BackgroundColor="#1E1E1E" GroupName="CoeffGroup" Content="1.45in   " TextColor="White"/>
+                <RadioButton x:Name="Rb255" BackgroundColor="#1E1E1E" GroupName="CoeffGroup" Content="2.55in   " TextColor="White"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="15" Margin="0,0,0,10">
+                <RadioButton x:Name="Rb5" BackgroundColor="#1E1E1E" GroupName="CoeffGroup" Content="5-in   " TextColor="White"/>
+                <RadioButton x:Name="Rb10" BackgroundColor="#1E1E1E" GroupName="CoeffGroup" Content="10-in   " TextColor="White"/>
+            </HorizontalStackLayout>
+
+            <Button Text="Рассчитать" 
+                    BackgroundColor="#333333" TextColor="White"
+                    Clicked="OnCalculateBreakerClicked"/>
+
+            <Label Text="Результат:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryBreakerResult" IsReadOnly="True" BackgroundColor="#1E1E1E" TextColor="#64B5F6" Margin="0,0,0,10"/>
+
+            <!-- Пояснительный текст -->
+            <Border BackgroundColor="#1E1E1E" Padding="10" Margin="0,5,0,15">
+                <VerticalStackLayout Spacing="4">
+                    <Label Text="Обратите внимание, токи перегрузки разные:" TextColor="#64B5F6" FontSize="11" FontAttributes="Bold"/>
+                    <Label Text="• 1.13in — ток условного нерасцепления." TextColor="#B0B0B0" FontSize="10"/>
+                    <Label Text="• 1.45in — ток условного расцепления, при котором в течение часа автомат не должен отключиться." TextColor="#B0B0B0" FontSize="10"/>
+                    <Label Text="• 2.55in — ток, при котором автомат должен отключиться в течение 1-60 сек." TextColor="#B0B0B0" FontSize="10"/>
+                    <Label Text="• 5-in — аварийный ток перегрузки (1-10 сек)." TextColor="#B0B0B0" FontSize="10"/>
+                    <Label Text="• 10-in — аварийный ток короткого замыкания (моментально)." TextColor="#B0B0B0" FontSize="10"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <Button Text="Показать сечения кабелей" 
+                    BackgroundColor="#333333" TextColor="White"
+                    Clicked="OnGoToCableTableClicked"/>
+
+            <Button Text="Назад" 
+                    BackgroundColor="#B71C1C" TextColor="White"
+                    Clicked="OnBackClicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

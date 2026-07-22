@@ -1,0 +1,35 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForAndroid.EnergyCostPage"
+             Title="Расчёт стоимости кВт/ч в минуту"
+             BackgroundColor="#121212">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="15">
+            <Label Text="Расчёт стоимости кВт/ч в минуту"
+                   TextColor="#FF5252"
+                   FontAttributes="Italic,Bold"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,5"/>
+
+            <Label Text="Мощность прибора (Вт):" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryPower" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="Вт" PlaceholderColor="#B0B0B0"/>
+
+            <Label Text="Тариф за 1 кВт/ч (руб):" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryTariff" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="руб" PlaceholderColor="#B0B0B0"/>
+
+            <Label Text="Время работы (мин):" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryMinutes" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="мин" PlaceholderColor="#B0B0B0"/>
+
+            <Label Text="Результат 1: Цена 1 мин (руб):" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryResMin" IsReadOnly="True" BackgroundColor="#1E1E1E" TextColor="#64B5F6"/>
+
+            <Label Text="Результат 2: Итог за всё время (руб):" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryResTotal" IsReadOnly="True" BackgroundColor="#1E1E1E" TextColor="#64B5F6" Margin="0,0,0,5"/>
+
+            <Button Text="Рассчитать" BackgroundColor="#333333" TextColor="White" Clicked="OnCalculateClicked"/>
+            <Button Text="Назад" BackgroundColor="#B71C1C" TextColor="White" Clicked="OnBackClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

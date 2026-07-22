@@ -1,0 +1,37 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForAndroid.OhmCalculatorPage"
+             Title="Калькулятор закона Ома"
+             BackgroundColor="#121212">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="15">
+
+            <Label Text="Калькулятор закона Ома"
+                   TextColor="#FF5252"
+                   FontAttributes="Italic,Bold"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,10"/>
+
+            <Label Text="Сопротивление (Ом):" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryResistance" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="Введите Ом" PlaceholderColor="#B0B0B0"/>
+
+            <Label Text="Напряжение (В):" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryVoltage" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="Введите В" PlaceholderColor="#B0B0B0"/>
+
+            <Button Text="Перевести в Амперы" 
+                    BackgroundColor="#333333" TextColor="White"
+                    Clicked="OnCalculateOhmClicked"/>
+
+            <Label Text="Результат (А):" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryOhmResult" IsReadOnly="True" BackgroundColor="#1E1E1E" TextColor="#64B5F6" Margin="0,0,0,20"/>
+
+            <!-- Кнопка выхода / возврата -->
+            <Button Text="Назад" 
+                    BackgroundColor="#B71C1C" TextColor="White"
+                    Clicked="OnBackClicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,53 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForAndroid.WattCalculatorPage"
+             Title="Калькулятор Ватт и Ампер"
+             BackgroundColor="#121212">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="15">
+
+            <Label Text="Калькулятор ватт в ампер и обратно"
+                   TextColor="#FF5252"
+                   FontAttributes="Italic,Bold"
+                   FontSize="16"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,10"/>
+
+            <!-- БЛОК 1: Ватты в Амперы -->
+            <Label Text="Мощность Ватт:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryWatts" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="Введите Вт" PlaceholderColor="#B0B0B0"/>
+
+            <Label Text="Напряжение, В:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryVolts1" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="Введите В" PlaceholderColor="#B0B0B0"/>
+
+            <Button Text="Перевести в Амперы" 
+                    BackgroundColor="#333333" TextColor="White"
+                    Clicked="OnCalculateAmpsClicked"/>
+
+            <Label Text="Результат (А):" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryResultAmps" IsReadOnly="True" BackgroundColor="#1E1E1E" TextColor="#64B5F6" Margin="0,0,0,20"/>
+
+
+            <!-- БЛОК 2: Амперы в Ватты -->
+            <Label Text="Сила тока, А:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryAmps" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="Введите А" PlaceholderColor="#B0B0B0"/>
+
+            <Label Text="Напряжение, В:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryVolts2" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="Введите В" PlaceholderColor="#B0B0B0"/>
+
+            <Button Text="Перевести в Ватты" 
+                    BackgroundColor="#333333" TextColor="White"
+                    Clicked="OnCalculateWattsClicked"/>
+
+            <Label Text="Результат (Втт):" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryResultWatts" IsReadOnly="True" BackgroundColor="#1E1E1E" TextColor="#64B5F6" Margin="0,0,0,20"/>
+
+            <!-- Кнопка выхода / возврата -->
+            <Button Text="Назад" 
+        BackgroundColor="#B71C1C" TextColor="White"
+        Clicked="OnBackClicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
