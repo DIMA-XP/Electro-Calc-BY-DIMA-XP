@@ -1,0 +1,48 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForAndroid.AboutPage"
+             Title="О программе"
+             BackgroundColor="#121212">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="15">
+            <Label Text="О программе"
+                   TextColor="#64B5F6"
+                   FontAttributes="Italic,Bold"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,10"/>
+
+            <Label TextColor="White" FontSize="13">
+                <Label.Text>
+                    Калькулятор Ватт в Амперы и обратно V3.0 (Android V1.0).
+Создал DIMA XP - 
+Версия 1.0 - 30 Января 2023 Год
+- Релиз                    
+Версия 2.0 - 27 Декабря 2023 Год
+- Новые функции                   
+Версия 2.1 - 03 Июня 2024 Год
+- Новые функции                    
+Версия 2.1.1 - 11 Января 2026 Год
+- Исправление бага с процессом
+Версия 3.0.0 - 12 Января 2026 Год
+- Новые функции
+Версия для Android - 1.0  - 21 Июля 2026г 
+- Портирования версии Windows под Android                     
+         
+
+Помогали в написании -
+Дима Попов и HCPP20334.
+
+©DIMA XP 2023-2026
+                </Label.Text>
+            </Label>
+
+            <Button Text="Назад" 
+                    BackgroundColor="#B71C1C" 
+                    TextColor="White" 
+                    Clicked="OnBackClicked"
+                    Margin="0,15,0,0"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

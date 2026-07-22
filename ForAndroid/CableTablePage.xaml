@@ -1,0 +1,277 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForAndroid.CableTablePage"
+             Title="Сечения кабелей и токи"
+             BackgroundColor="#121212">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="15">
+
+            <Label Text="Сечения кабелей и их максимальные токи"
+                   TextColor="#FF5252"
+                   FontAttributes="Italic,Bold"
+                   FontSize="16"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,5"/>
+
+            <!-- ================= БЛОК 1: ОТКРЫТАЯ ПРОВОДКА ================= -->
+            <VerticalStackLayout Spacing="5">
+                <Border BackgroundColor="#2D3748" Padding="5">
+                    <Label Text="ОТКРЫТАЯ ПРОВОДКА" TextColor="#64B5F6" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                </Border>
+
+                <!-- Шапка открытой проводки (5 колонок) -->
+                <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2" RowSpacing="2">
+                    <Border BackgroundColor="#333333" Grid.Column="0" Padding="3">
+                        <Label Text="Сечение мм²" TextColor="White" FontSize="10" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </Border>
+                    <Border BackgroundColor="#333333" Grid.Column="1" Padding="3">
+                        <Label Text="Медь Ток" TextColor="White" FontSize="10" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </Border>
+                    <Border BackgroundColor="#333333" Grid.Column="2" Padding="3">
+                        <Label Text="Медь 220В" TextColor="White" FontSize="10" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </Border>
+                    <Border BackgroundColor="#333333" Grid.Column="3" Padding="3">
+                        <Label Text="Медь 380В" TextColor="White" FontSize="10" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </Border>
+                    <Border BackgroundColor="#333333" Grid.Column="4" Padding="3">
+                        <Label Text="Алюм Ток" TextColor="White" FontSize="10" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </Border>
+                </Grid>
+
+                <!-- Строки открытой проводки -->
+                <VerticalStackLayout Spacing="2">
+                    <!-- 0,5 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="0,5" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="11" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="2,4" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="-" Grid.Column="3" TextColor="Gray" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="-" Grid.Column="4" TextColor="Gray" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 0,75 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="0,75" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="15" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="3,3" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="-" Grid.Column="3" TextColor="Gray" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="-" Grid.Column="4" TextColor="Gray" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 1,0 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="1,0" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="17" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="3,7" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="6,4" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="-" Grid.Column="4" TextColor="Gray" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 1,5 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="1,5" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="23" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="5,0" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="8,7" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="-" Grid.Column="4" TextColor="Gray" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 2,0 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="2,0" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="26" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="5,7" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="9,8" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="21" Grid.Column="4" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 2,5 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="2,5" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="30" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="6,6" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="11" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="24" Grid.Column="4" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 4,0 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="4,0" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="41" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="9,0" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="15" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="32" Grid.Column="4" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 6,0 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="6,0" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="50" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="11" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="19" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="39" Grid.Column="4" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 10 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="10" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="80" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="17" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="30" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="60" Grid.Column="4" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 16 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="16" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="100" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="22" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="38" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="75" Grid.Column="4" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 25 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="25" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="140" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="30" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="53" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="105" Grid.Column="4" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 35 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="35" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="170" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="37" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="64" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="130" Grid.Column="4" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+
+
+            <!-- ================= БЛОК 2: ЗАКРЫТАЯ ПРОВОДКА ================= -->
+            <VerticalStackLayout Spacing="5" Margin="0,10,0,0">
+                <Border BackgroundColor="#2D3748" Padding="5">
+                    <Label Text="ЗАКРЫТАЯ ПРОВОДКА" TextColor="#64B5F6" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                </Border>
+
+                <!-- Шапка закрытой проводки (5 колонок) -->
+                <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2" RowSpacing="2">
+                    <Border BackgroundColor="#333333" Grid.Column="0" Padding="3">
+                        <Label Text="Сечение мм²" TextColor="White" FontSize="10" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </Border>
+                    <Border BackgroundColor="#333333" Grid.Column="1" Padding="3">
+                        <Label Text="Медь Ток" TextColor="White" FontSize="10" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </Border>
+                    <Border BackgroundColor="#333333" Grid.Column="2" Padding="3">
+                        <Label Text="Медь 220В" TextColor="White" FontSize="10" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </Border>
+                    <Border BackgroundColor="#333333" Grid.Column="3" Padding="3">
+                        <Label Text="Медь 380В" TextColor="White" FontSize="10" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </Border>
+                    <Border BackgroundColor="#333333" Grid.Column="4" Padding="3">
+                        <Label Text="Алюм Ток" TextColor="White" FontSize="10" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </Border>
+                </Grid>
+
+                <!-- Строки закрытой проводки -->
+                <VerticalStackLayout Spacing="2">
+                    <!-- 0,5 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="0,5" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="-" Grid.Column="1" TextColor="Gray" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="-" Grid.Column="2" TextColor="Gray" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="-" Grid.Column="3" TextColor="Gray" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="-" Grid.Column="4" TextColor="Gray" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 0,75 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="0,75" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="-" Grid.Column="1" TextColor="Gray" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="-" Grid.Column="2" TextColor="Gray" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="-" Grid.Column="3" TextColor="Gray" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="-" Grid.Column="4" TextColor="Gray" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 1,0 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="1,0" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="14" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="3,0" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="5,3" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="-" Grid.Column="4" TextColor="Gray" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 1,5 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="1,5" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="15" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="3,3" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="5,7" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="-" Grid.Column="4" TextColor="Gray" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 2,0 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="2,0" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="19" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="4,1" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="7,2" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="14" Grid.Column="4" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 2,5 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="2,5" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="21" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="4,6" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="7,9" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="16" Grid.Column="4" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 4,0 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="4,0" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="27" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="5,9" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="10" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="21" Grid.Column="4" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 6,0 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="6,0" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="34" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="7,4" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="12" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="26" Grid.Column="4" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 10 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="10" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="50" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="11" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="19" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="38" Grid.Column="4" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 16 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="16" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="80" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="17" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="30" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="55" Grid.Column="4" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 25 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="25" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="100" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="22" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="38" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="65" Grid.Column="4" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                    <!-- 35 -->
+                    <Grid ColumnDefinitions="65, 55, 55, 55, 55" ColumnSpacing="2">
+                        <Label Text="35" Grid.Column="0" TextColor="#64B5F6" FontAttributes="Bold" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="130" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="29" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="51" Grid.Column="3" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                        <Label Text="75" Grid.Column="4" TextColor="White" HorizontalTextAlignment="Center" BackgroundColor="#1E1E1E"/>
+                    </Grid>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+
+            <Button Text="Назад" 
+                    BackgroundColor="#B71C1C" TextColor="White"
+                    Clicked="OnBackClicked"
+                    Margin="0,10,0,10"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

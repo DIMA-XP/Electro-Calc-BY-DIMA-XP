@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Обратите внимания, то что токи перегрузки разные 
+1.13іn ток условного нерасцепления.
+1.45іn ток условного расцепления при котором
+В течение часа автомат не должен отключится.
+2.55in ток при котором автомат
+должен отключится в течение 1-60 сек.
+5-in аварийный ток перегрузки, при котором 
+автомат должен отключится в течение 1-10 сек
+10-in аварийный ток короткого замыкания при котором
+автомат должен отключится моментально.</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAFBQAAAEAIAC4BgAAFgAAACgAAAAUAAAAKAAAAAEAIAAAAAAAQAYAABMLAAATCwAAAAAAAAAA
+        AAD///////////////////////////7////9/f3//v7+////////////////////////////////////
+        ///////////////////////////////////////////////////4+fn/4OHh/+bn5//g4eH/z9DQ/+Xn
+        5//t7u7/7e/v/+7w8P/o6ur/8PLy//X29v/9/f3////////////////////////////7+/r/3t3c/8fG
+        xv/Gxsb/3t/f/6Cjo/9BREb/qaur/+Di4//f4eH/u76+/1ZZWf+jpqX/7e7u//v7+///////////////
+        /////////////9/X0P+1sq//vL29/8LDw//T1dX/xsfG/56fnP++vrv/zs3I/87Oy/+9vr3/hIaG/7K1
+        tf/m6On/+/z+////////////////////////////z8G2/7Svq//Dw8P/vsDA/8LExf+3oYX/u4c4/7uG
+        Nf+7hC7/vIg1/72NPv/BlEn/wphS/8ijZf/Yu47/5tS3//39+//////////////////Lua3/uLKu/8PD
+        w//AwMD/vL2+/6qPbP+ybQz/tGkA/7VrAP+0bgb/sm8J/7ZwA/+5bwD/uW8A/7huAP/Gjzz/+vfx////
+        /////////////8y7r/+3sq3/wMHB/8C/v/+5urr/w8K//8Ghev+pYgf/qGAF/6iDWf+rn4//uqCA/6xr
+        FP+tZQH/p3Ap/9fGrv/+/v3/////////////////29HK/7y4tf/AwMD/vb29/7e4uP/Q09X/z7aN/7Z3
+        EP+0dA3/xKqF/9HV2f/Yz8H/tnsa/7RyAP+ziEf/7Ozt//7+/v/////////////////v7+//wcHB/7+/
+        v/+8vLz/u7u7/9vb2//PyL//w7Wh/829qP/Lxb3/4uPj/9/a0//FsIz/ybGI/9HDrP/w8PH//v7+////
+        /////////////+/v7//AwMD/vLy8/7q6uv+6urr/2tra/9bW1v/W1tf/3+Hh/9fY2P/j5eT/5efn/9bY
+        2f/k6On/7fDx//Hz8//+/v7/////////////////7+/v/76+vv+1t7f/t7i4/7m6uf/Z2dn/0M/O/8vM
+        xv+0u6r/5uno/+vt7f/q7Oz/5Obl/7i/r//Z3Nj/8fPz//7+/v/////////////////v7+//vb29/7i4
+        uP+4uLj/ubm5/9jY1//JxsP/0c7M/9zd2//n6Ob/6erp/+vs6//r7Ov/3uHc/+bo5//x8vL//v7+////
+        /////////////+/v7/+8vLz/uLi4/7W1tf+4uLj/2NPM/9TCrv/Tv6v/2sy8/9rNuf/azLX/2s23/9vN
+        t//bzbn/2sy4/+bg0//+//7/////////////////8vLy/729vf+3t7f/tba2/8TFxf/b3Nz/3Nza/9rZ
+        1//b29n/4OHh/+Lj4v/j4+H/4+Ph/+Pj4f/n5uP/8fHv///////////////////////j4+P/t7e3/7e3
+        t/+0t7b/1djY/93f3//f4eH/3uDh/97g4P/e4OD/3+Hh/+Hj4//h4+P/4ePj//P09P//////////////
+        /////////////9vb2/+1tbX/tbW1/7a2tv/U1tX/xsjI/5qamf+/wL//2Nra/9nb2//T1dT/sbGw/8LE
+        w//f4eH/9fb2////////////////////////////3d3d/7Ozs/+0tLT/t7e3/9ja2v+4urr/YmBe/6Kh
+        n//d39//3N7e/8fIyP9jYV7/hoWC/+Di4v/09fX////////////////////////////f39//r7Cw/7S0
+        tP/Gx8f/5efn/+jq6v/e39//4+Tk/+Xn5//l5+f/5efn/9PU1P/X2dn/6Orq//b39///////////////
+        /////////////+jo6P/LzMz/2tvb/+fp6f/q7Oz/7O7u/+vt7f/l6Of/6evq/+nr6//q7Oz/8/X1//j5
+        +f/6+vr//v7+/////////////////////////////Pz8//v8/P/9/f3/+/z8//r7+//7+/v/+vv7//r7
+        +//6+vr/+fn5//n6+v/+/v7/////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAA=
+</value>
+  </data>
+</root>

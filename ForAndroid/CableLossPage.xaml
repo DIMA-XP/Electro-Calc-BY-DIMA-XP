@@ -1,0 +1,56 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForAndroid.CableLossPage"
+             Title="Расчёт потерь на кабеле"
+             BackgroundColor="#121212">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="15">
+
+            <Label Text="Расчёт потерь на кабеле (~ ток)"
+                   TextColor="#FF5252"
+                   FontAttributes="Italic,Bold"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,5"/>
+
+            <!-- Выбор материала жилы -->
+            <Border BackgroundColor="#1E1E1E" Padding="10">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Материал жилы" TextColor="#64B5F6" FontSize="12" FontAttributes="Bold"/>
+                    <HorizontalStackLayout Spacing="20">
+                        <RadioButton x:Name="RbAluminum" BackgroundColor="#1E1E1E" GroupName="MaterialGroup" IsChecked="True" Content="Алюминий   " TextColor="White"/>
+                        <RadioButton x:Name="RbCopper" BackgroundColor="#1E1E1E" GroupName="MaterialGroup" Content="Медь   " TextColor="White"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <Label Text="Напряжение:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryVoltage" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="В" PlaceholderColor="#B0B0B0"/>
+
+            <Label Text="Мощность:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryPower" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="Вт или кВт" PlaceholderColor="#B0B0B0"/>
+
+            <Label Text="Длина кабеля:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryLength" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="м" PlaceholderColor="#B0B0B0"/>
+
+            <Label Text="Сечение жилы мм²:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntrySection" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White" Placeholder="мм²" PlaceholderColor="#B0B0B0"/>
+
+            <Label Text="Температура:" TextColor="White" FontAttributes="Bold"/>
+            <Entry x:Name="EntryTemp" Text="25" Keyboard="Numeric" BackgroundColor="#2D2D2D" TextColor="White"/>
+
+            <Label Text="Результат:" TextColor="White" FontAttributes="Bold"/>
+            <Editor x:Name="EditorResult" IsReadOnly="True" BackgroundColor="#1E1E1E" TextColor="#64B5F6" HeightRequest="90" Margin="0,0,0,5"/>
+
+            <Button Text="Рассчитать" 
+                    BackgroundColor="#333333" TextColor="White"
+                    Clicked="OnCalculateLossClicked"/>
+
+            <Button Text="Назад" 
+                    BackgroundColor="#B71C1C" TextColor="White"
+                    Clicked="OnBackClicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

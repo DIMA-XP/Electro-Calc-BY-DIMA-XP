@@ -1,0 +1,13 @@
+﻿<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForAndroid.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Цвета для темной темы по умолчанию -->
+            <Color x:Key="PageBackgroundColor">#121212</Color>
+            <Color x:Key="TextColor">White</Color>
+            <Color x:Key="ButtonBackgroundColor">#2D2D2D</Color>
+            <Color x:Key="ButtonTextColor">White</Color>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

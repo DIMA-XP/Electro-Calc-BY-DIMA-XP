@@ -1,0 +1,103 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForAndroid.ApartmentCalcPage"
+             Title="Расчёт электрики для квартиры"
+             BackgroundColor="#121212">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="12" Padding="15">
+            <Label Text="Расчёт электрики для квартиры"
+                   TextColor="#FF5252"
+                   FontAttributes="Italic,Bold"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,5"/>
+
+            <!-- Площадь -->
+            <VerticalStackLayout Spacing="3">
+                <Label Text="Площадь (м²):" TextColor="White" FontSize="14"/>
+                <Entry x:Name="EntryArea"
+                       Placeholder="Введите площадь"
+                       PlaceholderColor="#888888"
+                       Keyboard="Numeric"
+                       BackgroundColor="#1E1E1E"
+                       TextColor="White"/>
+            </VerticalStackLayout>
+
+            <!-- Комнаты -->
+            <VerticalStackLayout Spacing="3">
+                <Label Text="Количество комнат:" TextColor="White" FontSize="14"/>
+                <HorizontalStackLayout Spacing="10">
+                    <Button Text="-" BackgroundColor="#1E1E1E" TextColor="White" WidthRequest="50" Clicked="OnMinusRoomsClicked"/>
+                    <Button Text="+" BackgroundColor="#1E1E1E" TextColor="White" WidthRequest="50" Clicked="OnPlusRoomsClicked"/>
+                    <Label x:Name="LblRooms" Text="1" TextColor="White" FontSize="18" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Розетки -->
+            <VerticalStackLayout Spacing="3">
+                <Label Text="Кол-во розеток (220, ПК, ТВ):" TextColor="White" FontSize="14"/>
+                <HorizontalStackLayout Spacing="10">
+                    <Button Text="-" BackgroundColor="#1E1E1E" TextColor="White" WidthRequest="50" Clicked="OnMinusSocketsClicked"/>
+                    <Button Text="+" BackgroundColor="#1E1E1E" TextColor="White" WidthRequest="50" Clicked="OnPlusSocketsClicked"/>
+                    <Label x:Name="LblSockets" Text="1" TextColor="White" FontSize="18" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Люстры -->
+            <VerticalStackLayout Spacing="3">
+                <Label Text="Количество люстр:" TextColor="White" FontSize="14"/>
+                <HorizontalStackLayout Spacing="10">
+                    <Button Text="-" BackgroundColor="#1E1E1E" TextColor="White" WidthRequest="50" Clicked="OnMinusLightsClicked"/>
+                    <Button Text="+" BackgroundColor="#1E1E1E" TextColor="White" WidthRequest="50" Clicked="OnPlusLightsClicked"/>
+                    <Label x:Name="LblLights" Text="1" TextColor="White" FontSize="18" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Выключатели -->
+            <VerticalStackLayout Spacing="3">
+                <Label Text="Кол-во выключателей:" TextColor="White" FontSize="14"/>
+                <HorizontalStackLayout Spacing="10">
+                    <Button Text="-" BackgroundColor="#1E1E1E" TextColor="White" WidthRequest="50" Clicked="OnMinusSwitchesClicked"/>
+                    <Button Text="+" BackgroundColor="#1E1E1E" TextColor="White" WidthRequest="50" Clicked="OnPlusSwitchesClicked"/>
+                    <Label x:Name="LblSwitches" Text="1" TextColor="White" FontSize="18" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Радиокнопки Электроплита / Газ -->
+            <VerticalStackLayout Spacing="5" Margin="0,5">
+                <Label Text="Тип плиты:" TextColor="White" FontSize="14"/>
+                <HorizontalStackLayout Spacing="20">
+                    <RadioButton x:Name="RadioGas" BackgroundColor="#1E1E1E" Content="Газ   " TextColor="White" IsChecked="True"/>
+                    <RadioButton x:Name="RadioElectric" BackgroundColor="#1E1E1E" Content="Электроплита" TextColor="White"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Чекбокс Кондиционер -->
+            <HorizontalStackLayout Spacing="10" Margin="0,5">
+                <CheckBox x:Name="CheckCond" Color="#64B5F6"/>
+                <Label Text="Кондиционер" TextColor="White" VerticalOptions="Center" FontSize="15"/>
+            </HorizontalStackLayout>
+
+            <!-- Кнопки управления -->
+            <Grid ColumnDefinitions="*, *" ColumnSpacing="10" Margin="0,5">
+                <Button Grid.Column="0" Text="Рассчитать" BackgroundColor="#1E88E5" TextColor="White" Clicked="OnCalculateClicked"/>
+                <Button Grid.Column="1" Text="Назад" BackgroundColor="#B71C1C" TextColor="White" Clicked="OnBackClicked"/>
+            </Grid>
+
+            <!-- Блок результатов -->
+            <Border Stroke="#333333" BackgroundColor="#1E1E1E" StrokeThickness="1" Padding="10" Margin="0,5">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8"/>
+                </Border.StrokeShape>
+                <ScrollView HeightRequest="220">
+                    <Label x:Name="LblResult" 
+                           TextColor="#64B5F6" 
+                           FontSize="12" 
+                           LineBreakMode="WordWrap"/>
+                </ScrollView>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
